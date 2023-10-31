@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116230536-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-116230536-1');
+    </script>
+
+    <meta charset=utf-8>
+    <title>Metazion『麦塔希恩工作室』</title>
+    <meta name=description content="Metazion，麦塔希恩工作室">
+    <meta name=keywords content="Metazion,麦塔希恩">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="image/favicon32.ico" type="/image/x-icon">
+    <link rel="stylesheet" href="thirdparty/bootstrap/bootstrap.min.css">
+    <script src="thirdparty/jquery/jquery.min.js"></script>
+    <script src="thirdparty/bootstrap/bootstrap.min.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        a:hover {
+            color: limegreen !important;
+            text-decoration: none !important;
+        }
+
+        .bg {
+            background: #000 url('image/bg.jpg') no-repeat bottom center;
+            background-size: cover;
+        }
+
+        .main-nav {
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .main-nav a {
+            color: white;
+            transition: color .5s ease-in-out;
+        }
+
+        .main-nav a:hover {
+            outline: 0;
+        }
+
+        .main-nav-top {
+            padding: .25rem;
+            background: #000;
+        }
+
+        .internal-scroll {}
+
+        #hall,
+        #about span {
+            font-weight: bold;
+        }
+
+        .jump {
+            position: relative;
+            animation: jump 1s linear .5s infinite;
+        }
+
+        @keyframes jump {
+            0% {
+                top: 0px;
+                opacity: 1;
+            }
+
+            50% {
+                top: 10px;
+                opacity: .5;
+            }
+
+            100% {
+                top: 20px;
+                opacity: 0;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(".navbar").offset().top > 50) {
+                    $(".fixed-top").addClass("main-nav-top");
+                } else {
+                    $(".fixed-top").removeClass("main-nav-top");
+                }
+            });
+
+            var $root = $('html, body');
+            $('.internal-scroll').click(function () {
+                $root.animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top main-nav" role="navigation">
+        <a class="navbar-brand font-weight-bold internal-scroll" href="#hall">
+            <img src="image/logo_tp_64.png" width="32px" height="32px" alt="logo">
+        </a>
+        <div id="navs" class="collapse navbar-collapse">
+            <ul class="navbar-nav nav-pills mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link internal-scroll" href="#about">关于</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="hall" class="d-flex flex-column h-100 bg">
+        <div class="align-self-center my-auto">
+            <div class="mx-auto p-3 text-center">
+                <span style="font-size: 2.5rem;">Metazion</span>
+            </div>
+            <div class="mx-auto p-3 text-center">
+                <span style="font-size: 2rem;">麦塔希恩工作室</span>
+            </div>
+            <div class="mx-auto p-5 text-center" style="margin-bottom: 8rem;">
+                <a class="px-1" href="https://github.com/kaleofeng">
+                    <img src="image/github.png" width="24px" height="24px" title="GitHub" alt="Github" />
+                </a>
+                <a class="px-1" href="https://qilu.me">
+                    <img src="image/blog.png" width="24px" height="24px" title="Blog" alt="Blog" />
+                </a>
+                <a class="px-1" href="https://www.metazion.net">
+                    <img src="image/tool.png" width="24px" height="24px" title="MetaTool" alt="MetaTool" />
+                </a>
+            </div>
+        </div>
+        <div class="align-self-center">
+            <div class="mx-auto p-3 text-center">
+                <a class="p-2 internal-scroll jump" href="#about">
+                    <img src="image/arrow_down.png" width="48px" height="48px" alt="About" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="d-flex flex-column h-100">
+        <div class="align-self-center my-auto">
+            <div class="mx-auto p-2 text-center">
+                <span style="font-size: 2.25rem;">Metazion</span>
+            </div>
+            <div class="mx-auto p-2 text-center">
+                <span style="font-size: 1.75rem;">麦塔希恩工作室</span>
+            </div>
+            <div class="mx-auto p-5 text-center">
+                <p style="font-size: 1rem;">
+                    Meta元始寓意万物本源<br>
+                    Zion锡恩取自《黑客帝国》<br>
+                    这是一个创意工作室，提供各种有用、有趣的东西<br>
+                    Metazion，让生活奇特而多彩<br>
+                </p>
+            </div>
+            <div class="mx-auto p-2 text-center">
+                <span style="font-size: 1.5rem;">联系我们</span>
+            </div>
+            <div class="mx-auto p-1 text-center">
+                <a class="p-2" href="https://github.com/KaleoFeng" title="GitHub" alt="Github">GitHub</a>
+            </div>
+            <div class="mx-auto p-1 text-center">
+                <a class="p-2" href="https://qilu.me" title="Blog" alt="Blog">Blog</a>
+            </div>
+            <div class="mx-auto p-1 text-center">
+                <a class="p-2" href="https://t.me/joinchat/JWlVBwwg6hIOnf-wrZt_Tw" title="Telegram"
+                    alt="Telegram">Telegram</a>
+            </div>
+            <div class="mx-auto p-1 text-center">
+                <img src="image/wechat.jpg" width="128px" height="128px" title="MetaTool" alt="MetaTool" />
+            </div>
+        </div>
+        <footer class="mt-4 py-2 text-center" style="background-color:whitesmoke">
+            Copyright © 2022 <a href="https://www.metazion.com">Metazion</a>. All Rights Reserved
+        </footer>
+    </section>
+</body>
+
+</html>
